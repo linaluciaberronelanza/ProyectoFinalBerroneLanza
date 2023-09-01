@@ -1,0 +1,65 @@
+[
+    {
+        "id": "Rext",
+        "titulo": "Render exterior",
+        "imagen": "../img/caj1.png",
+        "precio": "$1000",
+        "texto": "Render desde el exterior o fachada de una obra. Se entrega imagen en alta resolucion.(Sin maqueta incluida)"
+    },
+    {
+        "id": "Rint",
+        "titulo": "Render interior",
+        "imagen": "../img/pcrender4.png",
+        "precio": "$7000",
+        "texto": "Imagen interior de la obra, desde el punto de vista indicado; alta resolución.(sin maqueta incluida)"
+    },
+    {
+        "id": "Rplant",
+        "titulo": "Render planta de venta",
+        "imagen": "../img/pcrender8.png",
+        "precio": "$7000",
+        "texto": "Plantas en alta resolución, tipo 3D para ventas. Estilo a elegir."
+    },
+    {
+        "id": "Maq3d",
+        "titulo": "Maquetado 3d",
+        "imagen": "../img/prod4.png",
+        "precio": "$10000",
+        "texto": "Maquetado 3d de edificio o producto en Sketchup. Se entrega archivo skp."
+    },
+    {
+        "id": "Inf",
+        "titulo": "Inforgrafia",
+        "imagen": "../img/prod5.png",
+        "precio": "$3000",
+        "texto": "Diagrama visual individual, que resume o explica figurativamente informaciones o textos. Estilos variados."
+    },
+    {
+        "id": "Infc",
+        "titulo": "Infografia compleja",
+        "imagen": "../img/prod6.png",
+        "precio": "$7000",
+        "texto": "Diagrama visual complejo, que resume o explica figurativamente informaciones o textos. Estilos variados."
+    },
+    {
+        "id": "Axo",
+        "titulo": "Axonometria",
+        "imagen": "../img/graficocontacto1.png",
+        "precio": "$12000",
+        "texto": "Axonometría de obra u objeto, despieces infográficos.Se entrega png a convenir. Estilo a elegir"
+    },
+    {
+        "id": "Legarq",
+        "titulo": "Legajo arquitectonico",
+        "imagen": "../img/prod8.jpg",
+        "precio": "$12000",
+        "texto": "Plantas, cortes, vistas, legajos completos. Diferentes estilos. Precio sobre 100 m2. Consultar por mas m2."
+    },
+    {
+        "id": "Desurb",
+        "titulo": "Desarrollo Urbanistico",
+        "imagen": "../img/prod9.png",
+        "precio": "$15000",
+        "texto": "Plano o esquema infográfico sobre un área urbanistica. Planta 3d informativa. Estilos varios."
+    }
+]
