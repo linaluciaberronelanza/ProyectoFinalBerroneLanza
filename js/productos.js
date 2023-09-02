@@ -1,20 +1,16 @@
-//LOS PRODUCTOS ESTAN EN EL ARCHIVO JSON 
-let productos = [];
-
-fetch("../js/simproductos.json")
-    .then(response => response.json())
-    .then(data => {
-        productos = data;
-        cargarProductos(productos);
-    })
-
-const contenedorProductos = document.querySelector("#contenedor-productos");
-let botonesAgregar = document.querySelector("boton-item");
-
-
-//creamos un div primero, le agregamos la clase item, y despues le colocamos todo lo que tenian los productos adentro 
+//Esperamos que todos los elementos de la página cargen para ejecutar el script
+document.addEventListener('DOMContentLoaded', () => {
+    ready();
+    fetch("../js/simproductos.json")
+        .then(response => response.json())
+        .then(data => {
+            cargarProductos(data);
+        })
+})
 
 function cargarProductos(productosElegidos) {
+
+    const contenedorProductos = document.querySelector("#contenedor-productos");
 
     contenedorProductos.innerHTML = "";
 
@@ -34,7 +30,6 @@ function cargarProductos(productosElegidos) {
         contenedorProductos.appendChild(div);
     })
     actualizarBotonesAgregar();
-    console.log(botonesAgregar);
 }
 
 function actualizarBotonesAgregar() {
@@ -47,13 +42,6 @@ function actualizarBotonesAgregar() {
 
 //Variable que mantiene el estado visible del carrito
 let carritoVisible = false;
-
-//Espermos que todos los elementos de la pàgina cargen para ejecutar el script
-if (document.readyState == 'loading') {
-    document.addEventListener('DOMContentLoaded', ready)
-} else {
-    ready();
-}
 
 function ready() {
     //Agregremos funcionalidad a los botones eliminar del carrito
@@ -114,7 +102,6 @@ function agregarAlCarritoClicked(event) {
     let titulo = item.querySelector('.titulo-item').innerText;
     let precio = item.getElementsByClassName('precio-item')[0].innerText;
     let imagenSrc = item.getElementsByClassName('img-item')[0].src;
-    console.log(imagenSrc);
 
     agregarItemAlCarrito(titulo, precio, imagenSrc);
     hacerVisibleCarrito();
@@ -220,7 +207,6 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc) {
 function sumarCantidad(event) {
     let buttonClicked = event.target;
     let selector = buttonClicked.parentElement;
-    console.log(selector.getElementsByClassName('carrito-item-cantidad')[0].value);
     let cantidadActual = selector.getElementsByClassName('carrito-item-cantidad')[0].value;
     cantidadActual++;
     selector.getElementsByClassName('carrito-item-cantidad')[0].value = cantidadActual;
@@ -230,7 +216,6 @@ function sumarCantidad(event) {
 function restarCantidad(event) {
     let buttonClicked = event.target;
     let selector = buttonClicked.parentElement;
-    console.log(selector.getElementsByClassName('carrito-item-cantidad')[0].value);
     let cantidadActual = selector.getElementsByClassName('carrito-item-cantidad')[0].value;
     cantidadActual--;
     if (cantidadActual >= 1) {
@@ -298,7 +283,6 @@ function actualizarTotalCarrito() {
         //quitamos el simobolo peso y el punto de milesimos.
         let precio = parseFloat(precioElemento.innerText.replace('$', '').replace('.', ''));
         let cantidadItem = item.getElementsByClassName('carrito-item-cantidad')[0];
-        console.log(precio);
         let cantidad = cantidadItem.value;
         total = total + (precio * cantidad);
     }
